@@ -1,1 +1,7 @@
 Django==4.0.2
+# The following packages are for deployment
+gunicorn
+django-heroku
+dj-database-url
+psycopg2
+whitenoise
