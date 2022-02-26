@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <style>
@@ -84,8 +85,13 @@ section {
   </div>
   </form>
   
-  <section id="section"><h2></h2></section>
+  <section id="section"><h2>{{ ref_url }}</h2></section>
+  {% load social_share %}
+  
+  <div id="share">
     
+    <!-- <button class="button" data-sharer="linkedin" data-url="someUrl">Share on Linkedin</button> -->
+  </div>
 </main>
 
 <script type="text/javascript">
@@ -100,8 +106,22 @@ section {
         csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
       },
       success: function(data){
-        $('h2').html("www.kykt.tk/"+data)
+        let url = data;
+        $('h2').html(url)
       }
     });
   });
+
+  $(document).on('button')
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
+
+<script type="text/javascript">
+  $("#shorten").on('click', function() {
+    // add new buttons with share behaviour
+    $('#share').append('<button class="twitter" data-title="Some button" data-url="somesite.com"></button>');
+    window.Sharer.init();
+})
+$('#').append(
+  <button class="button" data-sharer="facebook" data-hashtag="hashtag" data-url="someUrl">Share on Facebook</button>)
 </script>

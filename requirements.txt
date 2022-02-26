@@ -1,4 +1,7 @@
 Django==4.0.2
+python-decouple
+django-social-share
+requests
 # The following packages are for deployment
 gunicorn
 django-heroku
