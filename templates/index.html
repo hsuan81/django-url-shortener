@@ -18,7 +18,7 @@ section {
 
 body {
   min-height: 100vh;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", Tahoma;
   line-height: 1.5;
   color: #111;
 }
@@ -30,12 +30,13 @@ main {
   border-radius: 2.5px;
   box-shadow: 0 10px 20px rgba(17, 17, 17, 0.125),
     0 5px 5px rgba(17, 17, 17, 0.25);
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background-image: linear-gradient(to right, #d09330 0%, #330867 100%);
 }
 
 h1 {
   padding: 1rem;
   color: white;
+  text-align: center;
 }
 
 input,
@@ -73,6 +74,11 @@ section {
   background-color: white;
 }
 
+#share {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.596);
+}
+
     </style>
 </head>
 <main>
@@ -86,12 +92,7 @@ section {
   </form>
   
   <section id="section"><h2>{{ ref_url }}</h2></section>
-  {% load social_share %}
-  
-  <div id="share">
-    
-    <!-- <button class="button" data-sharer="linkedin" data-url="someUrl">Share on Linkedin</button> -->
-  </div>
+  <div id="share"></div>
 </main>
 
 <script type="text/javascript">
@@ -108,20 +109,15 @@ section {
       success: function(data){
         let url = data;
         $('h2').html(url)
+        let sharers = '<button class="button" data-sharer="reddit" data-url=' + url + '>Share on Reddit</button>'
+                + '<button class="button" data-sharer="facebook" data-hashtag="hashtag" data-url=' + url + '>Share on Facebook</button>'
+                + '<button class="button" data-sharer="twitter" data-title="Checkout Sharer.js!" data-hashtags="awesome, sharer.js" data-url=' + url + '>Share on Twitter</button>'
+                + '<button class="button" data-sharer="telegram" data-title="Checkout Sharer.js!" data-url=' + url + '>Share on Telegram</button>'
+
+        $('#share').append(sharers)
+        window.Sharer.init();
       }
     });
   });
-
-  $(document).on('button')
 </script>
 <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
-
-<script type="text/javascript">
-  $("#shorten").on('click', function() {
-    // add new buttons with share behaviour
-    $('#share').append('<button class="twitter" data-title="Some button" data-url="somesite.com"></button>');
-    window.Sharer.init();
-})
-$('#').append(
-  <button class="button" data-sharer="facebook" data-hashtag="hashtag" data-url="someUrl">Share on Facebook</button>)
-</script>
