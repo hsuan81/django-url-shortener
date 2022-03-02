@@ -13,7 +13,7 @@ You can share the shortened url on Telegram.
 ![share shortened url on telegram](/assets/images/web_shortener.png "share on telegram")
 
 You can share the shortened url on reddit.
-![share shortened url on reddit](/assets/images/web_shortener.png "share on reddit")
+![share shortened url on reddit](https://github.com/hsuan81/django-url-shortener/blob/main/images/share_reddit.png "share on reddit")
 
 
 ## Getting Started
