@@ -61,7 +61,7 @@ This website was deployed on Heroku, some dependencies are for the purpose of de
 
 ## Resources
 
-[Social share javascript package](https://ellisonleao.github.io/sharer.js/)
-[Django url shortener project on Github](https://github.com/tomitokko/django_url_shortner)
-[Django url shortener project tutorial on Youtube](https://www.youtube.com/watch?v=qPtScmB8CgA&list=PL1neKdrN14qPnbqipaDxcKK0qfrCb1Qpb&index=4&t=2569s&ab_channel=freeCodeCamp.org)
+- [Social share javascript package](https://ellisonleao.github.io/sharer.js/)
+- [Django url shortener project on Github](https://github.com/tomitokko/django_url_shortner)
+- [Django url shortener project tutorial on Youtube](https://www.youtube.com/watch?v=qPtScmB8CgA&list=PL1neKdrN14qPnbqipaDxcKK0qfrCb1Qpb&index=4&t=2569s&ab_channel=freeCodeCamp.org)
 
